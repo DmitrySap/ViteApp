@@ -1,5 +1,3 @@
-import time
-
 from pages.base_page import BasePage
 from pages.locators import AddPetLocators
 from pages.config import Names, Ages
@@ -8,7 +6,6 @@ from pages.config import Names, Ages
 class AddPage(BasePage):
 
     def add_name(self):
-        time.sleep(1)
         add_name = self.browser.find_element(*AddPetLocators.NAME_INPUT)
         add_name.send_keys(*Names.hamster_name)
 
@@ -29,5 +26,5 @@ class AddPage(BasePage):
         hamster.click()
 
     def submit_add(self):
-        submit_btn = self.browser.find_element(*AddPetLocators.SUBMIT_BTN)
+        submit_btn = self.browser.find_element(*AddPetLocators.SUBMIT_ADD_BTN)
         submit_btn.submit()

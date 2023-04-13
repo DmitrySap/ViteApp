@@ -30,26 +30,18 @@ class ProfileLocators:
     DELETE_3RD_PET_YES = (By.XPATH, '/html/body/div[3]/div[2]/button[2]')
 
 
-class EditPetLocators:
+class AddPetLocators:
     NAME_INPUT = (By.ID, 'name')
     AGE_INPUT = (By.CSS_SELECTOR, '#age > input')
     TYPE_DROPDOWN = (By.ID, 'typeSelector')
     PARROT_TYPE = (By.XPATH, '//li[contains(.,"parrot")]')
     CAT_TYPE = (By.XPATH, '//li[contains(.,"cat")]')
+    HAMSTER_TYPE = (By.XPATH, '//li[contains(.,"hamster")]')
     GENDER_DROPDOWN = (By.ID, 'genderSelector')
     FEMALE = (By.XPATH, '//li[contains(.,"Female")]')
     MALE = (By.XPATH, '//li[contains(.,"Male")]')
-    SUBMIT_BTN = (By.XPATH, '//*[@id="app"]/main/div/form/div/div[2]/div[3]/button')
-
-
-class AddPetLocators:
-    NAME_INPUT = (By.ID, 'name')
-    AGE_INPUT = (By.CSS_SELECTOR, '#age > input')
-    TYPE_DROPDOWN = (By.ID, 'typeSelector')
-    HAMSTER_TYPE = (By.XPATH, '//li[contains(.,"hamster")]')
-    GENDER_DROPDOWN = (By.ID, 'genderSelector')
-    MALE = (By.XPATH, '//li[contains(.,"Male")]')
-    SUBMIT_BTN = (By.XPATH, '//*[@id="app"]/main/div/div/form/div/div[2]/div[3]/button[1]')
+    SUBMIT_EDIT_BTN = (By.XPATH, '//*[@id="app"]/main/div/form/div/div[2]/div[3]/button')
+    SUBMIT_ADD_BTN = (By.XPATH, '//*[@id="app"]/main/div/div/form/div/div[2]/div[3]/button[1]')
 
 
 class ShowDogsLocators:

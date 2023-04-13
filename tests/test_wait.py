@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as ec
 from pages.locators import AddPetLocators
 import time
 import pytest
@@ -19,8 +19,8 @@ class TestAddEditDeletePet:
 
     def test_add_pet(self, browser):
         page = AddPage(browser, self)
-        wait = WebDriverWait(browser, 10)           #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        page = wait.until(EC.visibility_of_element_located(*AddPetLocators.NAME_INPUT))
+        wait = WebDriverWait(browser, 10)
+        wait.until(ec.visibility_of_element_located(AddPetLocators.NAME_INPUT))
         page.add_name()
         page.add_age()
         page.add_gender()
