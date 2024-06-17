@@ -25,9 +25,10 @@ class RegisterPageLocators:
 class ProfileLocators:
     ADD_BTN = (By.CSS_SELECTOR, '#app > main > div > div > div.p-dataview-header > div > div:nth-child(1) > button')
     DELETE_PROFILE = (By.XPATH, '//*[@id="app"]/main/div/div/div[1]/div/div[2]/button/span[1]')
-    DELETE_3RD_PET = (By.XPATH, '//*[@id="app"]/main/div/div/div[2]/div/div[3]/div/div[2]/button[2]')
-    EDIT_3RD_PET = (By.XPATH, '//*[@id="app"]/main/div/div/div[2]/div/div[3]/div/div[2]/button[1]')
-    DELETE_3RD_PET_YES = (By.XPATH, '/html/body/div[3]/div[2]/button[2]')
+    EDIT_2ND_PET = (By.XPATH, '//div[2]/div/div[2]/button')
+    DELETE_2ND_PET = (By.XPATH, '//div[2]/div/div[2]/button[2]')
+    DELETE_2ND_PET_YES = (By.XPATH, '/html/body/div[3]/div[2]/button[2]')
+    PETS_NUMBER = (By.CSS_SELECTOR, '.col-12')
 
 
 class AddPetLocators:

@@ -1,14 +1,14 @@
 import time
 
 from pages.base_page import BasePage
-from pages.locators import AddPetLocators
-from pages.config import Names, Ages
+from locators import AddPetLocators
+from config import Names, Ages
 
 
 class EditPage(BasePage):
     def cat_name_clear(self):
         edit_name = self.browser.find_element(*AddPetLocators.NAME_INPUT)
-        time.sleep(1)
+        # time.sleep(1)
         edit_name.clear()
 
     def cat_name_input(self):

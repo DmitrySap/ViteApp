@@ -13,11 +13,14 @@ class Commends:
     commend_good = 'Good!'
 
 
-class LoginPageData:
+class PagesData:
+    MAIN_PAGE_URL = 'http://34.141.58.52:8080/#/'
     LOGIN_PAGE_URL = 'http://34.141.58.52:8080/#/login'
     REGISTER_PAGE_URL = 'http://34.141.58.52:8080/#/register'
-    MAIN_PAGE_URL = 'http://34.141.58.52:8080/#/'
     PROFILE_PAGE_URL = 'http://34.141.58.52:8080/#/profile'
+
+
+class ProfileData:
     valid_email = 'rif@mail.ru'
     valid_password = 'Urtuk!'
     invalid_email = 'Rif@mail.ru'

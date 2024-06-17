@@ -1,20 +1,21 @@
 import pytest
 from selenium import webdriver
 from pages.login_page import LoginPage
-from pages.config import LoginPageData
+from config import PagesData
 
 
-@pytest.fixture(scope='class')
+@pytest.fixture()
 def browser():
-    browser = webdriver.Chrome()
-    browser.maximize_window()
+    browser = webdriver.Firefox()
+    browser.maximize_window()  # окно браузера на всю страницу
+    browser.implicitly_wait(10)  # вызвал неявное ожидание
     yield browser
     browser.quit()
 
 
 @pytest.fixture()
-def go_to_login(browser):
-    link = LoginPageData.LOGIN_PAGE_URL
+def log_in(browser):
+    link = PagesData.LOGIN_PAGE_URL
     page = LoginPage(browser, link)
     page.open()
     page.go_to_email()

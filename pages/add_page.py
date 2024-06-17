@@ -1,6 +1,6 @@
 from pages.base_page import BasePage
-from pages.locators import AddPetLocators
-from pages.config import Names, Ages
+from locators import AddPetLocators
+from config import Names, Ages
 
 
 class AddPage(BasePage):

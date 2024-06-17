@@ -1,13 +1,9 @@
 from pages.base_page import BasePage
-from pages.locators import ShowDogsLocators, MainPageLocators
-from pages.config import Names
+from locators import ShowDogsLocators, MainPageLocators
+from config import Names
 
 
 class FindPetsPage(BasePage):
-    def menu_page(self):
-        menu = self.browser.find_element(*MainPageLocators.MENU_BTN)
-        menu.click()
-
     def dog_type(self):
         types = self.browser.find_element(*ShowDogsLocators.FILTER_BY_TYPE)
         types.click()

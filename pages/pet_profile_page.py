@@ -1,6 +1,6 @@
 from pages.base_page import BasePage
-from pages.locators import PetProfileLocators
-from pages.config import Commends
+from locators import PetProfileLocators
+from config import Commends
 
 
 class PetProfilePage(BasePage):
